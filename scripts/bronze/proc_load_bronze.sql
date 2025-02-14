@@ -99,6 +99,6 @@ EXCEPTION WHEN OTHERS THEN
   end_time := clock_timestamp(); -- Record end time even on error
   RAISE NOTICE 'Total time taken (including error): %', end_time - start_time;
 END;
-$$;
+$$
 
-CALL bronze.load_bronze()
+CALL bronze.load_bronze();
